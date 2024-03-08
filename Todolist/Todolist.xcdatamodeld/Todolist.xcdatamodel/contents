@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23D60" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="TaskInfo" representedClassName="TaskInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="isTaskCompleted" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="taskcategoryimg" optional="YES" attributeType="String"/>
+        <attribute name="taskdate" optional="YES" attributeType="String"/>
+        <attribute name="taskname" optional="YES" attributeType="String"/>
+        <attribute name="tasktime" optional="YES" attributeType="String"/>
+    </entity>
 </model>
