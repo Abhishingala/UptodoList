@@ -126,17 +126,13 @@
                             <constraint firstItem="5GW-pn-Ul4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="tLj-7y-1Nf"/>
                             <constraint firstItem="JJ8-nI-EGF" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="y9k-hm-qKa"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="JJ8-nI-EGF"/>
-                            </mask>
-                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Index" image="home2" selectedImage="home" id="hgl-gj-MVY">
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <connections>
                         <outlet property="Tableview" destination="tPZ-Ca-xW7" id="zXK-zy-kG2"/>
+                        <outlet property="nodataView" destination="JJ8-nI-EGF" id="qq1-nY-aX9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -151,6 +147,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LGb-oI-WB5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="byv-J6-LZ7">
                                 <rect key="frame" x="5" y="198" width="365" height="251"/>
                                 <subviews>
@@ -172,7 +172,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="PKe-1v-Ru3"/>
                                         </constraints>
-                                        <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -248,17 +248,22 @@
                             <constraint firstItem="byv-J6-LZ7" firstAttribute="centerX" secondItem="d0c-xK-D9n" secondAttribute="centerX" id="4vf-0k-ZWh"/>
                             <constraint firstItem="byv-J6-LZ7" firstAttribute="centerY" secondItem="d0c-xK-D9n" secondAttribute="centerY" constant="-10" id="AGI-Ew-3JW"/>
                             <constraint firstItem="byv-J6-LZ7" firstAttribute="leading" secondItem="uuV-RY-KUn" secondAttribute="leading" constant="5" id="AXn-wx-Xc4"/>
+                            <constraint firstItem="LGb-oI-WB5" firstAttribute="top" secondItem="d0c-xK-D9n" secondAttribute="top" id="CEH-P2-4aA"/>
+                            <constraint firstItem="LGb-oI-WB5" firstAttribute="trailing" secondItem="uuV-RY-KUn" secondAttribute="trailing" id="I1L-an-o7Q"/>
                             <constraint firstItem="uuV-RY-KUn" firstAttribute="trailing" secondItem="byv-J6-LZ7" secondAttribute="trailing" constant="5" id="QPi-H5-8R6"/>
+                            <constraint firstItem="8Zu-fZ-CtB" firstAttribute="top" secondItem="LGb-oI-WB5" secondAttribute="bottom" id="Qjw-FM-aOZ"/>
+                            <constraint firstItem="LGb-oI-WB5" firstAttribute="leading" secondItem="uuV-RY-KUn" secondAttribute="leading" id="j6W-VI-A8q"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="PopupView" destination="byv-J6-LZ7" id="fWP-eD-Ojp"/>
+                        <outlet property="tapgestureView" destination="LGb-oI-WB5" id="tiy-6F-DL5"/>
                         <outlet property="tasktextField" destination="2rh-sI-jtz" id="I0j-5i-DKX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X9C-Xc-xOe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="225" y="1877"/>
+            <point key="canvasLocation" x="224.80000000000001" y="1876.9115442278862"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="2gX-Kf-oFF">

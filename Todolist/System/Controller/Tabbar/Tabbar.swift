@@ -8,7 +8,9 @@
 import UIKit
 
 
-class Tabbar: UITabBarController {
+class Tabbar: UITabBarController, TaskCreationDelegate {
+    
+    
     
     let centerButton = UIButton(type: .custom)
     let buttonSize: CGFloat = 7
@@ -30,14 +32,19 @@ class Tabbar: UITabBarController {
         
     }
     
+    func taskDidCreate() {
+        let vc = viewControllers?.first as! HomeVC
+        vc.didloadSetup()
+    }
+    
     @objc func centerButtonAction(_ sender: UIButton) {
            
         let prsentvc = UIStoryboard(name: "Tabbar", bundle: nil).instantiateViewController(identifier: "AddTaskPopup") as! AddTaskPopup
-        
         prsentvc.modalTransitionStyle = .coverVertical
         prsentvc.modalPresentationStyle = .overCurrentContext
-        
+        prsentvc.taskCreationDelegate = self
         self.present(prsentvc, animated:true)
+        
        }
     
 }

@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class TimepickerPopup: UIViewController {
     
     
@@ -14,7 +15,7 @@ class TimepickerPopup: UIViewController {
     
     @IBOutlet weak var TimepickerView: UIView!
     
-    var datepopDissmiss: (() -> Void)?
+    var datepopDissmiss: ((String) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,13 +30,12 @@ class TimepickerPopup: UIViewController {
         let time = timePicker.date
         let formatter = DateFormatter()
         
-        formatter.dateFormat = "HH:mm:ss"
+        formatter.dateFormat = "HH:mm"
         let Time = formatter.string(for: time)
                 
-        TodolistDataModel.Shared.settasktime(tasktime: Time!)
-        
+               
         self.dismiss(animated: true)
-        datepopDissmiss!()
+        datepopDissmiss!(Time!)
 
         
         }

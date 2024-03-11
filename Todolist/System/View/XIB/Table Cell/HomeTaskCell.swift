@@ -22,6 +22,7 @@ class HomeTaskCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code\\
         self.cellview.layer.cornerRadius = 10
+        self.cellview.backgroundColor = UIColor.bg
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

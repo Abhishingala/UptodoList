@@ -17,10 +17,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Cm-ry-kMD">
-                        <rect key="frame" x="0.0" y="0.0" width="380" height="81"/>
+                        <rect key="frame" x="0.0" y="15" width="380" height="81"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="we2-sK-fPD">
-                                <rect key="frame" x="20" y="31.666666666666671" width="22" height="22"/>
+                                <rect key="frame" x="20" y="31.666666666666664" width="22" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="4Bb-PN-1gP"/>
                                     <constraint firstAttribute="width" constant="22" id="dv6-cx-mQ7"/>
@@ -40,7 +40,7 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="categoriland1" translatesAutoresizingMaskIntoConstraints="NO" id="V9S-VH-mds">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape1" translatesAutoresizingMaskIntoConstraints="NO" id="V9S-VH-mds">
                                 <rect key="frame" x="269" y="23" width="103" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="103" id="Yg7-PG-yvc"/>
@@ -65,9 +65,9 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="5Cm-ry-kMD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="BVk-4u-F3C"/>
+                    <constraint firstItem="5Cm-ry-kMD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="BVk-4u-F3C"/>
                     <constraint firstItem="5Cm-ry-kMD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="DF6-WP-pfT"/>
-                    <constraint firstAttribute="bottom" secondItem="5Cm-ry-kMD" secondAttribute="bottom" constant="15" id="Nvi-Pm-HCY"/>
+                    <constraint firstAttribute="bottom" secondItem="5Cm-ry-kMD" secondAttribute="bottom" id="Nvi-Pm-HCY"/>
                     <constraint firstAttribute="trailing" secondItem="5Cm-ry-kMD" secondAttribute="trailing" id="vWU-xM-Vzo"/>
                 </constraints>
             </tableViewCellContentView>
@@ -84,6 +84,6 @@
     </objects>
     <resources>
         <image name="buletBut" width="32" height="32"/>
-        <image name="categoriland1" width="174" height="58"/>
+        <image name="landscape1" width="128" height="58"/>
     </resources>
 </document>

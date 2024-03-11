@@ -10,7 +10,8 @@ import UIKit
 import CoreData
 
 
-class TodolistDataModel {
+class TodolistDataModel { 
+    
     
     static var Shared = TodolistDataModel()
     
@@ -30,64 +31,17 @@ class TodolistDataModel {
     }()
     
     
-    func settaskname (taskname: String)  {
+    func settaskname (taskname: String,tasktime: String,taskcategoryimg: String,isTaskCompleted: Bool,taskdate: String)  {
         
         let context = PersistentContainer.viewContext
         let entiti = NSEntityDescription.insertNewObject(forEntityName: "TaskInfo", into: context) as! TaskInfo
         
         entiti.taskname = taskname
-        
-        do {
-            try context.save()
-        }catch {
-            print("Not a save")
-        }
-    }
-    
-    func settasktime (tasktime: String ) {
-        
-        let context = PersistentContainer.viewContext
-        let entiti = NSEntityDescription.insertNewObject(forEntityName: "TaskInfo", into: context) as! TaskInfo
         entiti.tasktime = tasktime
-     
-        do {
-            try context.save()
-        }catch {
-            print("Not a save")
-        }
-    }
-    
-    func settaskcategoryimg (taskcategoryimg: String) {
-        
-        let context = PersistentContainer.viewContext
-        let entiti = NSEntityDescription.insertNewObject(forEntityName: "TaskInfo", into: context) as! TaskInfo
-        
         entiti.taskcategoryimg = taskcategoryimg
-        do {
-            try context.save()
-        }catch {
-            print("Not a save")
-        }
-    }
-    
-    func isTaskCompleted (isTaskCompleted: Bool) {
-        
-        let context = PersistentContainer.viewContext
-        let entiti = NSEntityDescription.insertNewObject(forEntityName: "TaskInfo", into: context) as! TaskInfo
         entiti.isTaskCompleted = isTaskCompleted
-        
-        do {
-            try context.save()
-        }catch {
-            print("Not a save")
-        }
-    }
-    
-    func settaskdate (taskdate: String) {
-        let context = PersistentContainer.viewContext
-        let entiti = NSEntityDescription.insertNewObject(forEntityName: "TaskInfo", into: context) as! TaskInfo
         entiti.taskdate = taskdate
-        
+
         do {
             try context.save()
         }catch {
@@ -95,9 +49,21 @@ class TodolistDataModel {
         }
     }
     
-    
-    func getcategary () {
+    func gettaskdata () -> [TaskInfo] {
+
         
+        let context = PersistentContainer.viewContext
+        var request = [TaskInfo]()
+        
+        do {
+            request = try context.fetch(TaskInfo.fetchRequest())
+            
+        }catch {
+            print("Data get error")
+        }
+        return request
     }
+    
+    
     
 }

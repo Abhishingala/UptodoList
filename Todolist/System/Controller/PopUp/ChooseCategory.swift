@@ -7,13 +7,17 @@
 
 import UIKit
 
+protocol categaory {
+    func categaorypass (category: String)
+}
+
 class ChooseCategory: UIViewController {
 
     @IBOutlet weak var addCategoryButoon: UIButton!
     
     @IBOutlet var categoryButton: [UIButton]!
     var index = Int()
-    
+    var delegatecategaory: categaory!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,11 +42,10 @@ class ChooseCategory: UIViewController {
     }
     
     @IBAction func addCategory(_ sender: UIButton) {
-        
-        
-        TodolistDataModel.Shared.settaskcategoryimg(taskcategoryimg: String(index))
+        delegatecategaory.categaorypass(category: String(index))
+       // TodolistDataModel.Shared.settaskcategoryimg(taskcategoryimg: String(index))
         print(URL.documentsDirectory)
-//        self.dismiss(animated: true)
+        self.dismiss(animated: true)
     }
     
 }

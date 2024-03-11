@@ -35,6 +35,7 @@
 		5BAA3BCA2B9AEB1D0078A4DD /* HomeTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA3BC82B9AEB1D0078A4DD /* HomeTaskCell.swift */; };
 		5BAA3BCB2B9AEB1D0078A4DD /* HomeTaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BAA3BC92B9AEB1D0078A4DD /* HomeTaskCell.xib */; };
 		5BAA3BCD2B9AFB0D0078A4DD /* TodolistDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA3BCC2B9AFB0C0078A4DD /* TodolistDataModel.swift */; };
+		5BBD14402B9E3171000A61D4 /* extection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBD143F2B9E3171000A61D4 /* extection.swift */; };
 		5BC83F782B9A47C300761166 /* DatePickerpopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC83F772B9A47C300761166 /* DatePickerpopUp.swift */; };
 		5BC83F7A2B9ACEFA00761166 /* TimepickerPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC83F792B9ACEFA00761166 /* TimepickerPopup.swift */; };
 		5BCAE99B2B99B2D100D5CEB0 /* AddTaskPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCAE99A2B99B2D100D5CEB0 /* AddTaskPopup.swift */; };
@@ -94,6 +95,7 @@
 		5BAA3BC82B9AEB1D0078A4DD /* HomeTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTaskCell.swift; sourceTree = "<group>"; };
 		5BAA3BC92B9AEB1D0078A4DD /* HomeTaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTaskCell.xib; sourceTree = "<group>"; };
 		5BAA3BCC2B9AFB0C0078A4DD /* TodolistDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodolistDataModel.swift; sourceTree = "<group>"; };
+		5BBD143F2B9E3171000A61D4 /* extection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extection.swift; sourceTree = "<group>"; };
 		5BC83F772B9A47C300761166 /* DatePickerpopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerpopUp.swift; sourceTree = "<group>"; };
 		5BC83F792B9ACEFA00761166 /* TimepickerPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimepickerPopup.swift; sourceTree = "<group>"; };
 		5BCAE99A2B99B2D100D5CEB0 /* AddTaskPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskPopup.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 		5B0E213B2B91D7DA00CD2631 /* Extenstion */ = {
 			isa = PBXGroup;
 			children = (
+				5BBD143F2B9E3171000A61D4 /* extection.swift */,
 			);
 			path = Extenstion;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 				5BC83F7A2B9ACEFA00761166 /* TimepickerPopup.swift in Sources */,
 				5B0E21422B91E9EB00CD2631 /* OnboadindimgCell.swift in Sources */,
 				5B0E20FE2B91CEE500CD2631 /* SceneDelegate.swift in Sources */,
+				5BBD14402B9E3171000A61D4 /* extection.swift in Sources */,
 				5BCAE99B2B99B2D100D5CEB0 /* AddTaskPopup.swift in Sources */,
 				5B1E41512B99987E00785D67 /* Tabbar.swift in Sources */,
 				5BCAE99F2B9A3A2C00D5CEB0 /* WelcomeVC.swift in Sources */,
