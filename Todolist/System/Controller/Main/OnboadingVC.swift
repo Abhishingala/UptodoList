@@ -14,6 +14,7 @@ class OnboadingVC: UIViewController, UICollectionViewDataSource, UICollectionVie
 
     @IBOutlet weak var Colletionview: UICollectionView!
     
+    @IBOutlet weak var nextbut: UIButton!
     var Onscreen: [Onboadingdata] = [Onboadingdata(image: "Onboadingimg1", tital: "Manage your tasks", info: "You can easily manage all of your daily tasks in DoMe for free") , Onboadingdata(image: "Onboadingimg2", tital: "Create daily routine", info: "In Uptodo  you can create your personalized routine to stay productive") , Onboadingdata(image: "Onboadingimg3", tital: "Orgonaize your tasks", info: "You can organize your daily tasks by adding your tasks into separate categories")]
     var currentpage = 0
     
@@ -23,7 +24,9 @@ class OnboadingVC: UIViewController, UICollectionViewDataSource, UICollectionVie
         self.Colletionview.delegate = self
         self.Colletionview.dataSource = self
         self.Colletionview.register(UINib(nibName: "OnboadindimgCell", bundle: nil), forCellWithReuseIdentifier: "OnboadindimgCell") 
+        self.nextbut.layer.cornerRadius = 5
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return Onscreen.count
@@ -48,8 +51,8 @@ class OnboadingVC: UIViewController, UICollectionViewDataSource, UICollectionVie
             self.srcolltoNext(currentindex: currentpage)
         }
         else {
-            let vc = UIStoryboard(name: "Tabbar", bundle: nil).instantiateViewController(withIdentifier: "YSTabBar") 
-            self.navigationController?.pushViewController(vc, animated: true)
+            let vc = UIStoryboard(name: "Tabbar", bundle: nil).instantiateViewController(withIdentifier: "Tabbar")
+            self.navigationController?.setViewControllers([vc], animated: true)
         }
         
         

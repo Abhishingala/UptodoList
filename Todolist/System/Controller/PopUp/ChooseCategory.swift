@@ -13,16 +13,25 @@ protocol categaory {
 
 class ChooseCategory: UIViewController {
 
+    @IBOutlet weak var PopUpview: UIView!
+    @IBOutlet weak var tapgestureView: UIView!
     @IBOutlet weak var addCategoryButoon: UIButton!
-    
     @IBOutlet var categoryButton: [UIButton]!
     var index = Int()
     var delegatecategaory: categaory!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.PopUpview.layer.cornerRadius = 10
         self.addCategoryButoon.layer.cornerRadius = 10
-       
+        let tap = UITapGestureRecognizer(target: self, action: #selector(taptodismiss(_:)))
+        self.tapgestureView.addGestureRecognizer(tap)
+    }
+    
+    @objc func taptodismiss (_ sender: UIButton) {
+        
+        self.dismiss(animated: true)
+        
     }
     
     

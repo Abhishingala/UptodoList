@@ -25,7 +25,9 @@
 		5B0E21452B91EBE000CD2631 /* SplashScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0E21442B91EBE000CD2631 /* SplashScreenVC.swift */; };
 		5B0E21472B91EC2800CD2631 /* OnboadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0E21462B91EC2700CD2631 /* OnboadingVC.swift */; };
 		5B0E21492B91ED3500CD2631 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0E21482B91ED3500CD2631 /* Model.swift */; };
+		5B168BC12BA04F6E00C0DF0A /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B168BC02BA04F6E00C0DF0A /* SettingVC.swift */; };
 		5B1E41512B99987E00785D67 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1E41502B99987E00785D67 /* Tabbar.swift */; };
+		5B859FE42B9F360700AB394D /* CompletedTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B859FE32B9F360700AB394D /* CompletedTaskVC.swift */; };
 		5B8A3B7F2B98764F00B971A7 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B8A3B7E2B98764F00B971A7 /* Color.xcassets */; };
 		5B8A3B812B9876BC00B971A7 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B8A3B802B9876BC00B971A7 /* Login.storyboard */; };
 		5B8A3BBF2B9993F000B971A7 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8A3BBE2B9993F000B971A7 /* LoginVC.swift */; };
@@ -40,7 +42,10 @@
 		5BC83F7A2B9ACEFA00761166 /* TimepickerPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC83F792B9ACEFA00761166 /* TimepickerPopup.swift */; };
 		5BCAE99B2B99B2D100D5CEB0 /* AddTaskPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCAE99A2B99B2D100D5CEB0 /* AddTaskPopup.swift */; };
 		5BCAE99F2B9A3A2C00D5CEB0 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCAE99E2B9A3A2C00D5CEB0 /* WelcomeVC.swift */; };
+		5BCFCD722B9ED18F00D96197 /* TaskEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCFCD712B9ED18F00D96197 /* TaskEditVC.swift */; };
 		5BD35FC92B9AE6C60075F376 /* ChooseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD35FC82B9AE6C60075F376 /* ChooseCategory.swift */; };
+		5BD503E92B9ED67C0079DB32 /* EditTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD503E82B9ED67C0079DB32 /* EditTask.storyboard */; };
+		5BD503EB2B9EE07C0079DB32 /* TaskedittitleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD503EA2B9EE07C0079DB32 /* TaskedittitleVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +90,9 @@
 		5B0E21442B91EBE000CD2631 /* SplashScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenVC.swift; sourceTree = "<group>"; };
 		5B0E21462B91EC2700CD2631 /* OnboadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboadingVC.swift; sourceTree = "<group>"; };
 		5B0E21482B91ED3500CD2631 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		5B168BC02BA04F6E00C0DF0A /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		5B1E41502B99987E00785D67 /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
+		5B859FE32B9F360700AB394D /* CompletedTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTaskVC.swift; sourceTree = "<group>"; };
 		5B8A3B7E2B98764F00B971A7 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		5B8A3B802B9876BC00B971A7 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		5B8A3BBE2B9993F000B971A7 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -100,7 +107,10 @@
 		5BC83F792B9ACEFA00761166 /* TimepickerPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimepickerPopup.swift; sourceTree = "<group>"; };
 		5BCAE99A2B99B2D100D5CEB0 /* AddTaskPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskPopup.swift; sourceTree = "<group>"; };
 		5BCAE99E2B9A3A2C00D5CEB0 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		5BCFCD712B9ED18F00D96197 /* TaskEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditVC.swift; sourceTree = "<group>"; };
 		5BD35FC82B9AE6C60075F376 /* ChooseCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCategory.swift; sourceTree = "<group>"; };
+		5BD503E82B9ED67C0079DB32 /* EditTask.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditTask.storyboard; sourceTree = "<group>"; };
+		5BD503EA2B9EE07C0079DB32 /* TaskedittitleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskedittitleVC.swift; sourceTree = "<group>"; };
 		5E17088236E725D9764BEAD9 /* Pods_TodolistTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodolistTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		852C55771201E7CF8A74A80D /* Pods_Todolist_TodolistUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Todolist_TodolistUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4C024C77B56A62C568069FA /* Pods_Todolist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Todolist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,6 +232,7 @@
 				5B0E21012B91CEE500CD2631 /* Main.storyboard */,
 				5B8A3BC22B99944200B971A7 /* Tabbar.storyboard */,
 				5B8A3B802B9876BC00B971A7 /* Login.storyboard */,
+				5BD503E82B9ED67C0079DB32 /* EditTask.storyboard */,
 				5B0E21092B91CEE800CD2631 /* LaunchScreen.storyboard */,
 				5B0E213E2B91E98C00CD2631 /* XIB */,
 			);
@@ -231,6 +242,7 @@
 		5B0E21342B91D6C100CD2631 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5BCFCD702B9ED14B00D96197 /* EditTask */,
 				5BCAE9A52B9A3AEA00D5CEB0 /* PopUp */,
 				5BCAE9A42B9A3AD500D5CEB0 /* Tabbar */,
 				5BCAE9A22B9A3ABC00D5CEB0 /* Login */,
@@ -315,6 +327,8 @@
 			children = (
 				5B8A3BC42B99945400B971A7 /* HomeVC.swift */,
 				5B1E41502B99987E00785D67 /* Tabbar.swift */,
+				5B859FE32B9F360700AB394D /* CompletedTaskVC.swift */,
+				5B168BC02BA04F6E00C0DF0A /* SettingVC.swift */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
@@ -326,8 +340,17 @@
 				5BC83F792B9ACEFA00761166 /* TimepickerPopup.swift */,
 				5BC83F772B9A47C300761166 /* DatePickerpopUp.swift */,
 				5BD35FC82B9AE6C60075F376 /* ChooseCategory.swift */,
+				5BD503EA2B9EE07C0079DB32 /* TaskedittitleVC.swift */,
 			);
 			path = PopUp;
+			sourceTree = "<group>";
+		};
+		5BCFCD702B9ED14B00D96197 /* EditTask */ = {
+			isa = PBXGroup;
+			children = (
+				5BCFCD712B9ED18F00D96197 /* TaskEditVC.swift */,
+			);
+			path = EditTask;
 			sourceTree = "<group>";
 		};
 		801D9D7F19FBC61E55450C2D /* Frameworks */ = {
@@ -466,6 +489,7 @@
 				5B8A3B812B9876BC00B971A7 /* Login.storyboard in Resources */,
 				5B8A3B7F2B98764F00B971A7 /* Color.xcassets in Resources */,
 				5BAA3BCB2B9AEB1D0078A4DD /* HomeTaskCell.xib in Resources */,
+				5BD503E92B9ED67C0079DB32 /* EditTask.storyboard in Resources */,
 				5B0E21082B91CEE800CD2631 /* Assets.xcassets in Resources */,
 				5B0E21032B91CEE500CD2631 /* Main.storyboard in Resources */,
 			);
@@ -562,11 +586,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B0E20FC2B91CEE500CD2631 /* AppDelegate.swift in Sources */,
+				5B168BC12BA04F6E00C0DF0A /* SettingVC.swift in Sources */,
 				5BAA3BCA2B9AEB1D0078A4DD /* HomeTaskCell.swift in Sources */,
 				5BC83F7A2B9ACEFA00761166 /* TimepickerPopup.swift in Sources */,
 				5B0E21422B91E9EB00CD2631 /* OnboadindimgCell.swift in Sources */,
 				5B0E20FE2B91CEE500CD2631 /* SceneDelegate.swift in Sources */,
 				5BBD14402B9E3171000A61D4 /* extection.swift in Sources */,
+				5BD503EB2B9EE07C0079DB32 /* TaskedittitleVC.swift in Sources */,
 				5BCAE99B2B99B2D100D5CEB0 /* AddTaskPopup.swift in Sources */,
 				5B1E41512B99987E00785D67 /* Tabbar.swift in Sources */,
 				5BCAE99F2B9A3A2C00D5CEB0 /* WelcomeVC.swift in Sources */,
@@ -574,6 +600,8 @@
 				5B0E21472B91EC2800CD2631 /* OnboadingVC.swift in Sources */,
 				5B8A3BBF2B9993F000B971A7 /* LoginVC.swift in Sources */,
 				5BC83F782B9A47C300761166 /* DatePickerpopUp.swift in Sources */,
+				5BCFCD722B9ED18F00D96197 /* TaskEditVC.swift in Sources */,
+				5B859FE42B9F360700AB394D /* CompletedTaskVC.swift in Sources */,
 				5B0E21062B91CEE500CD2631 /* Todolist.xcdatamodeld in Sources */,
 				5B0E213D2B91E00E00CD2631 /* Helper.swift in Sources */,
 				5B0E21492B91ED3500CD2631 /* Model.swift in Sources */,

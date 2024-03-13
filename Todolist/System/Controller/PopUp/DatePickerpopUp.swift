@@ -12,19 +12,27 @@ protocol Delegate {
 }
 
 class DatePickerpopUp: UIViewController {
-    @IBOutlet weak var popupView: UIView!
     
+    @IBOutlet weak var tagGestureView: UIView!
+    @IBOutlet weak var popupView: UIView!
     @IBOutlet weak var datepicker: UIDatePicker!
-   
     var delegateDate: Delegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.popupView.layer.cornerRadius = 15
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapTodismiss(_:)))
+        tagGestureView.addGestureRecognizer(tap)
     }
     
  
+    @objc func tapTodismiss (_ sender: UIButton) {
+        
+        self.dismiss(animated: true)
+        
+    }
+    
     
     @IBAction func chooseTimeButton(_ sender: UIButton) {
         

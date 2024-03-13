@@ -11,6 +11,7 @@ import UIKit
 class TimepickerPopup: UIViewController {
     
     
+    @IBOutlet weak var tapgestureView: UIView!
     @IBOutlet weak var timePicker: UIDatePicker!
     
     @IBOutlet weak var TimepickerView: UIView!
@@ -21,8 +22,16 @@ class TimepickerPopup: UIViewController {
         super.viewDidLoad()
         self.TimepickerView.layer.cornerRadius = 15
         
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapTodismiss(_:)))
+        tapgestureView.addGestureRecognizer(tap)
+        
     }
     
+    @objc func tapTodismiss (_ sender: UIButton) {
+        
+        self.dismiss(animated: true)
+        
+    }
   
     
     @IBAction func SaveButton(_ sender: UIButton) {

@@ -49,6 +49,20 @@ class TodolistDataModel {
         }
     }
     
+    func deleteTask (modelArry: inout[TaskInfo], index: Int) {
+        
+        let context = PersistentContainer.viewContext
+        context.delete(modelArry[index])
+        modelArry.remove(at: index)
+        
+        do {
+            try context.save()
+        }catch {
+            print("Data saving error")
+        }
+        
+    }
+    
     func gettaskdata () -> [TaskInfo] {
 
         
@@ -64,6 +78,19 @@ class TodolistDataModel {
         return request
     }
     
+    func updateTaskInfo (modelArry: inout[TaskInfo] , newValue: Any , index: Int , forkey: String) {
+        
+        let context = PersistentContainer.viewContext
+        
+        modelArry[index].setValue(newValue, forKey: forkey)
+        
+        do{
+           try context.save()
+        }catch {
+            print("data saving erro")
+        }
+        
+    }
     
     
 }

@@ -39,7 +39,7 @@
         <scene sceneID="w0f-2R-CV2">
             <objects>
                 <viewController storyboardIdentifier="OnboadingVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="erW-CZ-LdH" customClass="OnboadingVC" customModule="Todolist" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="IeI-aF-rkx">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="IeI-aF-rkx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -66,7 +66,7 @@
                                     <constraint firstItem="PdZ-Yf-SeA" firstAttribute="leading" secondItem="VGt-hs-3FU" secondAttribute="leading" constant="20" id="vAs-mW-KlB"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0u-Uh-NZU">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D0u-Uh-NZU">
                                 <rect key="frame" x="0.0" y="587" width="375" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uN7-YM-ofS">
@@ -81,7 +81,7 @@
                                             <action selector="backButton:" destination="erW-CZ-LdH" eventType="touchUpInside" id="f7b-lm-bH2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LE7-Oi-RKU">
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LE7-Oi-RKU">
                                         <rect key="frame" x="275" y="5" width="80" height="50"/>
                                         <color key="backgroundColor" red="0.53333333333333333" green="0.45882352941176469" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -101,6 +101,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="LE7-Oi-RKU" secondAttribute="trailing" constant="20" id="4iX-lg-qw6"/>
                                     <constraint firstAttribute="height" constant="60" id="B6y-EW-pWu"/>
+                                    <constraint firstAttribute="bottom" secondItem="LE7-Oi-RKU" secondAttribute="bottom" constant="5" id="Tlu-p1-LBg"/>
                                     <constraint firstItem="LE7-Oi-RKU" firstAttribute="centerY" secondItem="D0u-Uh-NZU" secondAttribute="centerY" id="XnM-IA-jaa"/>
                                     <constraint firstItem="uN7-YM-ofS" firstAttribute="top" secondItem="D0u-Uh-NZU" secondAttribute="top" constant="13" id="dlD-Qn-7Yh"/>
                                     <constraint firstItem="uN7-YM-ofS" firstAttribute="leading" secondItem="D0u-Uh-NZU" secondAttribute="leading" constant="20" id="hU6-gi-wAA"/>
@@ -108,7 +109,7 @@
                                     <constraint firstAttribute="bottom" secondItem="uN7-YM-ofS" secondAttribute="bottom" constant="13" id="sx9-3t-ngJ"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XAG-z7-zdH">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XAG-z7-zdH">
                                 <rect key="frame" x="0.0" y="88" width="375" height="424"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -141,6 +142,7 @@
                     <navigationItem key="navigationItem" id="aP2-d1-NKe"/>
                     <connections>
                         <outlet property="Colletionview" destination="XAG-z7-zdH" id="q8E-F2-bbW"/>
+                        <outlet property="nextbut" destination="LE7-Oi-RKU" id="5OC-MP-8h8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pw5-P0-GOx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

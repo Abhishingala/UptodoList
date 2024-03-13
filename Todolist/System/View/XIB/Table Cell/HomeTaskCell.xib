@@ -19,14 +19,14 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Cm-ry-kMD">
                         <rect key="frame" x="0.0" y="15" width="380" height="81"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="we2-sK-fPD">
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="we2-sK-fPD">
                                 <rect key="frame" x="20" y="31.666666666666664" width="22" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="4Bb-PN-1gP"/>
                                     <constraint firstAttribute="width" constant="22" id="dv6-cx-mQ7"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="buletBut"/>
+                                <state key="normal" image="Completed"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do Math Homework" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIE-1M-0PR">
                                 <rect key="frame" x="53.000000000000014" y="25" width="151.33333333333337" height="16"/>
@@ -83,7 +83,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="buletBut" width="32" height="32"/>
+        <image name="Completed" width="4000" height="4000"/>
         <image name="landscape1" width="128" height="58"/>
     </resources>
 </document>

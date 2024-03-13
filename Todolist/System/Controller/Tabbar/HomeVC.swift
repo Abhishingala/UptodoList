@@ -9,28 +9,43 @@ import UIKit
 
 
 
-class HomeVC: UIViewController {
+class HomeVC: UIViewController, UISearchBarDelegate {
     
     
 
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var nodataView: UIView!
     @IBOutlet weak var Tableview: UITableView!
  
-    var Taskdata = [TaskInfo]()
+   static var Taskdata = [TaskInfo]()
+    var resultdata = Taskdata
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.Tableview.delegate = self
+        self.Tableview.dataSource = self
+        self.Tableview.register(UINib(nibName: "HomeTaskCell", bundle: nil), forCellReuseIdentifier: "HomeTaskCell")
+        self.searchBar.delegate = self
+        print(URL.documentsDirectory)
         didloadSetup()
+        self.searchBar.placeholder = "Search"
+        self.searchBar.layer.cornerRadius = searchBar.frame.height / 2
+        self.searchBar.layer.borderColor = UIColor.systemGray2.cgColor
+        self.searchBar.layer.borderWidth = 1
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        Taskdata = TodolistDataModel.Shared.gettaskdata()
-        self.Tableview.reloadData()
+        self.didloadSetup()
     }
   
+    @IBAction func profilebut(_ sender: UIButton) {
+        
+        let vc = UIStoryboard(name: "Tabbar", bundle: nil).instantiateViewController(withIdentifier: "SettingVC")
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
     
     @objc func selectbutton (_ sender: UIButton) {
 //        sender.setImage(UIImage(named: "BuletButfill"), for: .selected)
@@ -38,18 +53,34 @@ class HomeVC: UIViewController {
 //        sender.isSelected.toggle()
         
     }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        resultdata = []
+        if searchText == "" {
+            resultdata = HomeVC.Taskdata
+            self.Tableview.reloadData()
+        }else {
+            
+            resultdata = HomeVC.Taskdata.filter({ $0.taskname!.lowercased().contains(searchText.lowercased()) })
+            self.Tableview.reloadData()
+        }
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+            searchBar.resignFirstResponder()
+        }
+    
 }
+
 
 
 extension HomeVC: UITableViewDataSource, UITableViewDelegate {
     
     func didloadSetup () {
         
-        self.Tableview.delegate = self
-        self.Tableview.dataSource = self
-        self.Tableview.register(UINib(nibName: "HomeTaskCell", bundle: nil), forCellReuseIdentifier: "HomeTaskCell")
-        Taskdata = TodolistDataModel.Shared.gettaskdata()
-        if Taskdata.count == 0 {
+        
+        HomeVC.Taskdata = TodolistDataModel.Shared.gettaskdata()
+        if HomeVC.Taskdata.count == 0 {
             self.Tableview.isHidden = true
             self.nodataView.isHidden = false
             
@@ -57,36 +88,19 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
             self.Tableview.isHidden = false
             self.nodataView.isHidden = true
         }
-
+        self.resultdata = HomeVC.Taskdata
         self.Tableview.reloadData()
     }
  
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
-        return 2
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var today = 0
-        var completet = 0
-        for data in Taskdata {
-            switch (section , data.isTaskCompleted) {
-            case (0 ,  false):
-                today += 1
-    
-            case (1 , true):
-                completet += 1
-            default:
-               break
-            }
-        }
-        
-        if section == 0 {
-            return today
-        }else {
-            return completet
-        }
+     
+        return resultdata.count
         
     }
     
@@ -103,7 +117,7 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
         
         let titla = UILabel()
         titla.textColor = UIColor.white
-        titla.text = section == 0 ? "Today" : "Completet"
+        titla.text = "All Task"
         titla.font = UIFont.boldSystemFont(ofSize: 15)
         titla.translatesAutoresizingMaskIntoConstraints = false
         
@@ -131,31 +145,39 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
     
       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let index = Taskdata[indexPath.row]
+          let index = resultdata[indexPath.row]
+          
+          let cell = Tableview.dequeueReusableCell(withIdentifier: "HomeTaskCell", for: indexPath) as! HomeTaskCell
+          cell.tasknamelbl.text = index.taskname
+          cell.tasktimelbl.text = "\(index.taskdate ?? "")" + " At \(index.tasktime ?? "")"
+          cell.taskcategoryimgview.image = UIImage(named: "landscape\(index.taskcategoryimg ?? "9")" )
+          
         
-        switch (indexPath.section , index.isTaskCompleted) {
-        case (0 , false):
-            let cell = Tableview.dequeueReusableCell(withIdentifier: "HomeTaskCell", for: indexPath) as! HomeTaskCell
-            let index = Taskdata[indexPath.row]
-            cell.tasknamelbl.text = index.taskname
-            cell.tasktimelbl.text =  "Today At \(index.tasktime ?? "")"
-            cell.selectedButton.addTarget(self, action: #selector(selectbutton(_:)), for: .touchDown)
-            cell.taskcategoryimgview.image = UIImage(named: "landscape\(index.taskcategoryimg ?? "9")" )
-
-            return cell
-
-        case (1 , true):
-            let cell = Tableview.dequeueReusableCell(withIdentifier: "HomeTaskCell", for: indexPath) as! HomeTaskCell
-            let index = Taskdata[indexPath.row]
-            cell.tasknamelbl.text = index.taskname
-            cell.tasktimelbl.text = index.tasktime
-            return cell
-            
-        default:
-            print("Invalid section")
-            
-        }
-        return UITableViewCell()
+              switch (index.isTaskCompleted) {
+              case (false):
+                  
+                  cell.selectedButton.setImage(UIImage(named: "buletBut"), for: .normal)
+                 
+              case (true):
+                  
+                  cell.selectedButton.setImage(UIImage(named: "Completed"), for: .normal)
+                  
+              }
+          
+        
+          return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+//        let index = HomeVC.Taskdata[indexPath.row]
+        
+        let vc = UIStoryboard(name: "EditTask", bundle: nil).instantiateViewController(identifier: "TaskEditVC") as! TaskEditVC
+        
+        vc.index = indexPath.row
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
     
 }
